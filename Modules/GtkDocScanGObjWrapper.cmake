@@ -13,6 +13,10 @@
 # (To distribute this file outside of CMake, substitute the full
 #  License text for the above reference.)
 
+# This is needed for find_package(PkgConfig) to work correctly --
+# CMAKE_MINIMUM_REQUIRED_VERSION needs to be defined.
+cmake_minimum_required_version(3.2)
+
 if(NOT APPLE)
     # We use pkg-config to fing glib et al
     find_package(PkgConfig)
